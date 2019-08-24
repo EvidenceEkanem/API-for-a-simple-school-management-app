@@ -35,7 +35,8 @@ exports.new = function (req, res) {
     student.save(function (err) {
         if (err)
             res.json(err);
-res.json({
+    res.json({
+            status: "success",
             message: 'Student created successfully!',
             data: student
         });
@@ -49,6 +50,7 @@ exports.view = function (req, res) {
             res.send(err);
         }
         res.json({
+            status: "success",
             message: "Student's details was retrieved successfully",
             data: student
         });
@@ -60,8 +62,8 @@ exports.update = function (req, res) {
 Student.findById(req.params.student_id, function (err, student) {
         if (err)
             res.send(err);
-            student.first_name = req.body.first_name ? req.body.first_name : student.first_name;
-            student.last_name = req.body.last_name ? req.body.last_name : student.last_name;
+            student.first_name = req.body.first_name;
+            student.last_name = req.body.last_name;
             student.gender = req.body.gender;
             student.state = req.body.state;
             student.dob = req.body.dob;
@@ -75,6 +77,7 @@ Student.findById(req.params.student_id, function (err, student) {
             if (err)
                 res.json(err);
             res.json({
+                status: "success",
                 message: 'Student Info was updated successfully',
                 data: student
             });
@@ -96,3 +99,4 @@ res.json({
         });
     });
 };
+
