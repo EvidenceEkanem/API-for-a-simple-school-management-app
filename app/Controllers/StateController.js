@@ -39,7 +39,6 @@ exports.new = function (req, res) {
         'Ekiti',
         'Enugu',
         'Federal Capital Territory',
-        'International',
         'Gombe',
         'Imo',
         'Jigawa',
