@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 let express = require('express');
 // Import Body parser
 let bodyParser = require('body-parser');
@@ -21,7 +19,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/sisApi', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/sisApi', { useNewUrlParser: true});
 
 let db = mongoose.connection;
 
@@ -31,17 +29,13 @@ if(!db)
 else
     console.log("Db connected successfully")
 
-// let port = process.env.PORT || 1261;
+let port = process.env.PORT || 1261;
 
 // app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'));
 
-// app.listen(port, function () {
-//     console.log('Welcome, your app is running on ' + port)
-// });
+app.listen(port, function () {
+    console.log('Welcome, your app is running on ' + port)
+});
 
 // Use Api routes in the App
 app.use('/api', apiRoutes)
-
-const port = process.env.PORT || 3000;
-
-app.listen(port);
