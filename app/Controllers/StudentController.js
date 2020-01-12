@@ -18,7 +18,7 @@ exports.index = function (req, res) {
     });
 };
 
-// Handle create contact actions
+// Handle create student actions
 exports.new = function (req, res) {
     let student = new Student();
     student.first_name = req.body.first_name ? req.body.first_name : student.first_name;
@@ -85,7 +85,6 @@ Student.findById(req.params.student_id, function (err, student) {
     });
 };
 
-
 // Handle delete student
 exports.delete = function (req, res) {
     Student.remove({
@@ -99,4 +98,3 @@ res.json({
         });
     });
 };
-

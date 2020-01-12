@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/sisApi', { useNewUrlParser: true});
+mongoose.connect('mongodb+srv://Evidoski:Ee09031988989@cluster0-wrfbb.mongodb.net/test', { useNewUrlParser: true});
+// mongoose.connect('mongodb://ekanemevidence:<password>@cluster0-shard-00-00-96sss.gcp.mongodb.net:27017,cluster0-shard-00-01-96sss.gcp.mongodb.net:27017,cluster0-shard-00-02-96sss.gcp.mongodb.net:27017/test?replicaSet=Cluster0-shard-0&ssl=true&authSource=admin', { useNewUrlParser: true});
 
 let db = mongoose.connection;
 
