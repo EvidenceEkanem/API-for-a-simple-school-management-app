@@ -30,7 +30,7 @@ if(!db)
 else
     console.log("Db connected successfully")
 
-let port = process.env.PORT || 1261;
+let port = process.env.PORT || 3000;
 
 // app.get('/', (req, res) => res.send('Hello World with Express and Nodemon'));
 
