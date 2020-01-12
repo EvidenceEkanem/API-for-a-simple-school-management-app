@@ -6,16 +6,16 @@ The `api` uri preceeds all API endpoints and the following endpoints are current
 
 * GET `/api/students`
 * POST `/api/students`
-* GET `/api/students/:id`
-* PUT `/api/students/:id`
-* PATCH `/api/students/:id`
-* DELETE `/api/students/:id`
+* GET `/api/student/:id`
+* PUT `/api/student/:id`
+* PATCH `/api/student/:id`
+* DELETE `/api/student/:id`
 
 # STATES API
 
-* GET `/api/students`
-* POST `/api/students`
-* DELETE `/api/students`
+* GET `/api/states`
+* POST `/api/states`
+* DELETE `/api/states`
 
 # INSTITUTIONS API
 
@@ -28,6 +28,7 @@ The `api` uri preceeds all API endpoints and the following endpoints are current
 * GET `/api/departments`
 * POST `/api/departments`
 * DELETE `/api/departments`
+
 
 
 ...built with Love By Evidence Ekanem

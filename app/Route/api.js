@@ -18,7 +18,7 @@ router.route('/students')
     .get(StudentController.index)
     .post(StudentController.new);
 
-router.route('/students/:student_id')
+router.route('/student/:student_id')
     .get(StudentController.view)
     .patch(StudentController.update)
     .put(StudentController.update)
